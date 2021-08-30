@@ -1,0 +1,41 @@
+@import url(https://fonts.google.com/specimen/Nunito+Sans);
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+header{
+    background-color: hsl(0, 0%, 100%);
+}
+img{
+    width: 100%;
+}
+.container  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    padding: 24px;
+}
+h1{
+    margin:0
+
+}
+.dark-mode{
+    font-size: 16px;
+}
+.btn-dark-mode .fas{
+    display: none;
+}
+
+body.dark .btn-dark-mode .fas {
+    display: inline-block;
+}
+body.dark .btn-dark-mode .far {
+    display: none;
+}

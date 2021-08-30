@@ -17,6 +17,7 @@ img{
 }
 .container  {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     max-width: 1440px;
@@ -26,7 +27,7 @@ h1{
     margin:0
 
 }
-.dark-mode{
+.btn-dark-mode{
     font-size: 16px;
 }
 .btn-dark-mode .fas{
@@ -38,4 +39,55 @@ body.dark .btn-dark-mode .fas {
 }
 body.dark .btn-dark-mode .far {
     display: none;
+}
+.search {
+    padding: 25px;
+    border-radius: 4px;
+    border: 1px solid hsl(0, 0%, 100%) ;
+    min-width: 240px; 
+}
+.dropdown {
+    background-color: hsl(0, 0%, 100%);
+    padding: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+}
+.fa-chevron-down{
+    margin-left: 10px;
+}
+.dropdown ul {
+    border-radius: 4px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type:  none;
+    width: 100%;
+}
+.dropdown.open ul{
+    display: block;
+}
+.dropdown ul li {
+    margin: 5px 0;
+}
+.card {
+    border-radius: 4px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+    max-width: 300px;
+    margin: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.card-body {
+    padding: 30px;
+} 
+.card-body h2 {
+    margin-top: 0;
+}
+.container.countries{
+    justify-content: center;
 }

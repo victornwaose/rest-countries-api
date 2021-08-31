@@ -1,4 +1,6 @@
-const countriesEl = document.getElementById("countries")
+const countriesEl = document.getElementById("countries");
+const toggleBtn = document.getElementById("toggle")
+
 
 async function getCountries() {
     const res = await fetch("https://restcountries.eu/rest/v2/all");
@@ -7,13 +9,13 @@ async function getCountries() {
      displayCountries(countries);
 }
 getCountries();
-
+ 
 function displayCountries(countries) {
     countries?.forEach(country=>{
         const countryEl =  document.createElement("div");
         countryEl.classList.add("card")
         countryEl.innerHTML= `
-        <div class="card">
+        <div >
         <div class="card-header">
            <img src=${country.flag} alt="">
         </div>
@@ -37,3 +39,6 @@ function displayCountries(countries) {
     })
     
 }
+toggleBtn.addEventListener("click", ()=>{
+    document.body.classList.toggle("dark");
+})

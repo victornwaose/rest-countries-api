@@ -1,6 +1,7 @@
 const countriesEl = document.getElementById("countries");
 const toggleBtn = document.getElementById("toggle")
-
+const filter = document.getElementById("filter")
+const search = document.getElementById("input")
 
 async function getCountries() {
     const res = await fetch("https://restcountries.eu/rest/v2/all");
@@ -41,4 +42,14 @@ function displayCountries(countries) {
 }
 toggleBtn.addEventListener("click", ()=>{
     document.body.classList.toggle("dark");
+})
+filter.addEventListener("click", ()=> {
+    filter.classList.toggle("open");
+});
+
+
+search.addEventListener("click",(e)=>{
+   const val= e.target.value
+
+   console.log(val);
 })

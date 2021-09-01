@@ -34,6 +34,7 @@ img{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     margin: auto;
     max-width: 1440px;
     padding: 24px;
@@ -113,4 +114,30 @@ body.dark .btn-toggle .far {
 }
 .container .countries{
     justify-content: center;
+}
+.modal {
+    background-color:hsl(0, 0%, 98%);
+    display: none;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+.modal img {
+    max-width: 300px;
+}
+.modal-body {
+    padding: 40px;
+    margin: auto;
+}
+.btn-close{
+    border: none;
+    font: 14px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
